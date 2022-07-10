@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE4C96C1286FF2B400C6766D /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C96C0286FF2B400C6766D /* Message.swift */; };
 		CE50C382284DCB9400F10583 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50C381284DCB9400F10583 /* AppDelegate.swift */; };
 		CE50C384284DCB9400F10583 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50C383284DCB9400F10583 /* SceneDelegate.swift */; };
-		CE50C386284DCB9400F10583 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50C385284DCB9400F10583 /* ViewController.swift */; };
+		CE50C386284DCB9400F10583 /* RecieveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50C385284DCB9400F10583 /* RecieveViewController.swift */; };
 		CE50C389284DCB9400F10583 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE50C387284DCB9400F10583 /* Main.storyboard */; };
 		CE50C38B284DCB9900F10583 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE50C38A284DCB9900F10583 /* Assets.xcassets */; };
 		CE50C38E284DCB9900F10583 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE50C38C284DCB9900F10583 /* LaunchScreen.storyboard */; };
@@ -36,10 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE4C96C0286FF2B400C6766D /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		CE50C37E284DCB9400F10583 /* gym_ble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gym_ble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE50C381284DCB9400F10583 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE50C383284DCB9400F10583 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE50C385284DCB9400F10583 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE50C385284DCB9400F10583 /* RecieveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecieveViewController.swift; sourceTree = "<group>"; };
 		CE50C388284DCB9400F10583 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE50C38A284DCB9900F10583 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE50C38D284DCB9900F10583 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -101,7 +103,8 @@
 			children = (
 				CE50C381284DCB9400F10583 /* AppDelegate.swift */,
 				CE50C383284DCB9400F10583 /* SceneDelegate.swift */,
-				CE50C385284DCB9400F10583 /* ViewController.swift */,
+				CE50C385284DCB9400F10583 /* RecieveViewController.swift */,
+				CE4C96C0286FF2B400C6766D /* Message.swift */,
 				CE50C387284DCB9400F10583 /* Main.storyboard */,
 				CE50C38A284DCB9900F10583 /* Assets.xcassets */,
 				CE50C38C284DCB9900F10583 /* LaunchScreen.storyboard */,
@@ -258,7 +261,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE50C386284DCB9400F10583 /* ViewController.swift in Sources */,
+				CE50C386284DCB9400F10583 /* RecieveViewController.swift in Sources */,
+				CE4C96C1286FF2B400C6766D /* Message.swift in Sources */,
 				CE50C382284DCB9400F10583 /* AppDelegate.swift in Sources */,
 				CE50C384284DCB9400F10583 /* SceneDelegate.swift in Sources */,
 			);
@@ -442,11 +446,16 @@
 				DEVELOPMENT_TEAM = F8B4LJMGD6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = gym_ble/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "BLE通信します";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "ESP32と通信します";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,7 +465,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -470,11 +479,16 @@
 				DEVELOPMENT_TEAM = F8B4LJMGD6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = gym_ble/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "BLE通信します";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "ESP32と通信します";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -484,7 +498,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
